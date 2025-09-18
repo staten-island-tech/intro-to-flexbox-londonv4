@@ -1,19 +1,21 @@
- {
-  box-sizing: border-box;
-  margin: 0;
+html,
+body {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
 }
 .card {
   width: 30%;
   height: 500px;
-  background-color: rgb(216, 151, 173);
+  background-color: palevioletred;
   margin: 20px auto;
 }
 .container {
   width: 90vw;
-  background-color: mediumvioletred;
-  margin: 20px auto;
+  background-color: black;
+  margin: 25px auto;
   display: flex;
-  justify-content: space around;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
