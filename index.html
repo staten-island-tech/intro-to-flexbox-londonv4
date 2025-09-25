@@ -1,14 +1,215 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Product Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <section class="container">
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-    </section>
+    <header class="site-header">
+      <h1>REM BEAUTY</h1>
+    </header>
+    <nav class="filter-bar">
+      <ul>
+        <li class="active">All</li>
+        <li>Gloss</li>
+        <li>Blush</li>
+        <li>Concealer</li>
+        <li>Other</li>
+      </ul>
+    </nav>
+
+    <div id="cart-message"></div>
+    <div class="gallery">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <img
+          src="https://rembeauty.com/cdn/shop/files/01_plumping-lip-gloss-on-your-collar-shimmer-rem-fembot.png?v=1750190225&width=480"
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>Plumping Lip Gloss (pink)</h2>
+          <h3>$9.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <img
+          src="https://media.ulta.com/i/ulta/2643725?w=200&h=200&fmt=auto"
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>Plumping Lip Gloss (purple)</h2>
+          <h3>$9.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <img
+          src="https://media.ulta.com/i/ulta/2643795?w=500&h=500"
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>Plumping Lip Gloss (white)</h2>
+          <h3>$9.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <img
+          src="https://rembeauty.com/cdn/shop/files/01_45.png?v=1740783834&width=480"
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>Satin Matte Blush</h2>
+          <h3>$14.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 5 -->
+      <div class="product-card">
+        <img
+          src="https://i8.amplience.net/i/liberty/000830288-R620614006-1?$medium$&qlt=90&fmt=auto&strip=true"
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>Satin Matte Blush</h2>
+          <h3>$14.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 6 -->
+      <div class="product-card">
+        <img
+          src="https://rembeauty.com/cdn/shop/files/REM_Concealer_PDP_Closed_Deep4C.png?crop=center&height=1024&v=1691443958&width=1024"
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>Sweetener Concealer (Medium)</h2>
+          <h3>$19.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 7 -->
+      <div class="product-card">
+        <img
+          src="https://phorcys-static.ewg.org/cdn-cgi/image/width=240,height=240,quality=60/https://phorcys-static.ewg.org/image/contents/760154/original."
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>Sweetener Concealer (Light)</h2>
+          <h3>$19.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 8 -->
+      <div class="product-card">
+        <img
+          src="https://rembeauty.com/cdn/shop/files/REM_Concealer_PDP_Closed_Rich10.png?v=1691443348&width=480"
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>Sweetener Concealer (Dark)</h2>
+          <h3>$19.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 9 -->
+      <div class="product-card">
+        <img
+          src="https://media.ulta.com/i/ulta/2635991?w=800&$ProductCardNeutralBGLight$&h=800&fmt=auto"
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>REM Brushes (5)</h2>
+          <h3>$9.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 10 -->
+      <div class="product-card">
+        <img
+          src="https://rembeauty.com/cdn/shop/files/01_5e95d263-609e-48b4-8188-844036298f69.png?crop=center&height=1024&v=1735695213&width=1024"
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>Flourishing Lengthining Mascara (Midnight Black)</h2>
+          <h3>$14.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 11 -->
+      <div class="product-card">
+        <img
+          src="https://i.ebayimg.com/images/g/PxgAAOSwHpJkEAR2/s-l1200.jpg"
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>Midnight Shadows Eyeshadow Palete</h2>
+          <h3>$24.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 12 -->
+      <div class="product-card">
+        <img
+          src="https://rembeauty.com/cdn/shop/files/REM_Ch2_Palette_PDP_Open_GogoBoots_14158862-2079-477a-a656-8752ab598d91.png?v=1710374787&width=480"
+          width="300"
+          height="300"
+        />
+        <div class="card-details">
+          <h2>GoGo Boots Eyeshadow Palette</h2>
+          <h3>$24.99</h3>
+          <button>Add To Cart</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Select all the "Add to Cart" buttons
+      const buttons = document.querySelectorAll("button");
+
+      // Loop through each button and add a click event
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Display the message
+          const messageDiv = document.getElementById("cart-message");
+          messageDiv.textContent = "✅ Added to cart!";
+
+          // Optional: make the message disappear after 2 seconds
+          setTimeout(() => {
+            messageDiv.textContent = "";
+          }, 2000);
+        });
+      });
+    </script>
   </body>
 </html>
