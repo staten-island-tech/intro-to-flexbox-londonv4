@@ -20,3 +20,16 @@ function inject(item) {
 }
 inject(products[0]);
 //loop through items
+
+function addToCart() {
+const butons = document.querySelectorAll("button");
+console.log(buttons)
+btnArray.forEach(btn) => btn.addEventListener("clicl", function (event) {
+    console.log(event.target.textContent);
+     console.log(event.target.closest(".details").getAttribute("data-title")
+);
+})
+};
+//find the item in the array
+//take that object and push into cart
+addToCart();
