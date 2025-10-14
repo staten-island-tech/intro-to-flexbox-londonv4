@@ -24,7 +24,7 @@ inject(products[0]);
 function addToCart() {
 const butons = document.querySelectorAll("button");
 console.log(buttons)
-btnArray.forEach(btn) => btn.addEventListener("clicl", function (event) {
+btnArray.forEach(btn) => btn.addEventListener("click", function (event) {
     console.log(event.target.textContent);
      console.log(event.target.closest(".details").getAttribute("data-title")
 );
