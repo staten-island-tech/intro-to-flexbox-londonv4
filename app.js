@@ -26,7 +26,7 @@ const butons = document.querySelectorAll("button");
 console.log(buttons)
 btnArray.forEach(btn) => btn.addEventListener("click", function (event) {
     console.log(event.target.textContent);
-     console.log(event.target.closest(".details").getAttribute("data-title")
+     console.log(event.target.closest(".card").getAttribute("data-title")
 );
 })
 };
