@@ -1,7 +1,23 @@
 const makeup = [
 {
-    name: "Eternal Sunshine",
-    category: Gloss,
+    name: "Plumping Lip Gloss (pink)",
+    category: "Gloss",
+    instock: true, 
+    price: 14.99,
+    img: "img/pinklipgloss",
+    alt: "5ml pink gloss for lips",
+}
+,{
+    name: "Plumping Lip Gloss (purple)",
+    category: "Gloss",
+    instock: true, 
+    price: 14.99,
+    img: "img/pinklipgloss",
+    alt: "5ml pink gloss for lips",
+}
+,{
+    name: "Plumping Lip Gloss ()",
+    category: "Gloss",
     instock: true, 
     price: 14.99,
     img: "img/pinklipgloss",
@@ -12,24 +28,35 @@ const makeup = [
 // create inject function
 function inject(item) {
     //do something
-    let name= testing
-    const container = document.querySelector(".container");
-    container.insertAdjacentHTML("afterbegin", '<h1> {testing} </h1>');
+  
+    const container = document.querySelector(".container");\
+    //add card code below
+    container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
     //query the container
     //using adjacent html push card into container
 }
-inject(products[0]);
+//test then for each loop thorugh makeup
+inject(makeup[0]);
 //loop through items
 
-function addToCart() {
+/* function addToCart() {
 const butons = document.querySelectorAll("button");
 console.log(buttons)
-btnArray.forEach(btn) => btn.addEventListener("click", function (event) {
+btnArray.forEach((btn) => btn.addEventListener("click", function (event) {
     console.log(event.target.textContent);
      console.log(event.target.closest(".card").getAttribute("data-title")
 );
 })
-};
+} */
 //find the item in the array
 //take that object and push into cart
-addToCart();
+
+
+
+const DOMSelectors = {
+    button: document.getElementById("btn"),
+    text: document.querySelector("#text"),
+    point: document.querySelectorAll(".point"),
+    pointTwo: document.getElementById("pointTwo"),
+};
+console.log(DOMSelectors.pointTwo)
