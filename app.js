@@ -13,29 +13,40 @@ const makeup = [
     instock: true, 
     price: 14.99,
     img: "img/pinklipgloss",
-    alt: "5ml pink gloss for lips",
+    alt: "5ml purple gloss for lips",
 }
 ,{
-    name: "Plumping Lip Gloss ()",
+    name: "Plumping Lip Gloss (white)",
     category: "Gloss",
     instock: true, 
     price: 14.99,
     img: "img/pinklipgloss",
-    alt: "5ml pink gloss for lips",
+    alt: "5ml white gloss for lips",
 }
 ]
 
 // create inject function
-function inject(item) {
+function inject(makeup) {
     //do something
-  
-    const container = document.querySelector(".container");\
-    //add card code below
-    container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
+      const container = document.querySelector(".container");\
+      container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
+          <div class="card">
+        <div class="img">
+          <img
+            src="https://rembeauty.com/cdn/shop/files/01_plumping-lip-gloss-on-your-collar-shimmer-rem-fembot.png?v=1750190225&width=480"
+          />
+        </div>
+        <div class="h2">
+          <h2>Plumping Lip Gloss (pink)</h2>
+        </div>
+        <div class="h3">
+          <h3>$9.99</h3>
+        </div>
+        </div>
     //query the container
     //using adjacent html push card into container
 }
-//test then for each loop thorugh makeup
+//test then for each loop through makeup
 inject(makeup[0]);
 //loop through items
 
@@ -50,13 +61,3 @@ btnArray.forEach((btn) => btn.addEventListener("click", function (event) {
 } */
 //find the item in the array
 //take that object and push into cart
-
-
-
-const DOMSelectors = {
-    button: document.getElementById("btn"),
-    text: document.querySelector("#text"),
-    point: document.querySelectorAll(".point"),
-    pointTwo: document.getElementById("pointTwo"),
-};
-console.log(DOMSelectors.pointTwo)
