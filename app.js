@@ -46,10 +46,27 @@ function inject(makeup) {
     //query the container
     //using adjacent html push card into container
 }
-//test then for each loop through makeup
 inject(makeup[0]);
-//loop through items
+{
+  makeup.forEach (makeup => {
+    if ()
+  }
 
+,  function filterByCategory() {
+  const cards= document.querySelectorAll("card");
+  cards.forEach((card)) => {
+    const CardCategory = card.getAttribute("data-category");
+    if (category === cardCategory) {
+      card.style.display = "";
+          }
+
+  }
+
+
+}
+
+
+}
 /* function addToCart() {
 const butons = document.querySelectorAll("button");
 console.log(buttons)
