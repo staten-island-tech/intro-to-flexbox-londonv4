@@ -5,7 +5,6 @@ const makeup = [
     instock: true, 
     price: 14.99,
     img: "img/pinklipgloss",
-    alt: "5ml pink gloss for lips",
 }
 ,{
     name: "Plumping Lip Gloss (purple)",
@@ -13,7 +12,6 @@ const makeup = [
     instock: true, 
     price: 14.99,
     img: "img/pinklipgloss",
-    alt: "5ml purple gloss for lips",
 }
 ,{
     name: "Plumping Lip Gloss (white)",
@@ -21,16 +19,14 @@ const makeup = [
     instock: true, 
     price: 14.99,
     img: "img/pinklipgloss",
-    alt: "5ml white gloss for lips",
 }
 ]
 
 // create inject function
 function inject(makeup) {
     //do something
-      const container = document.querySelector(".container");\
-      container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
-          <div class="card">
+      const container = document.querySelector(".container")
+      container.insertAdjacentHTML("afterbegin", `<div class="card">
         <div class="img">
           <img
             src="https://rembeauty.com/cdn/shop/files/01_plumping-lip-gloss-on-your-collar-shimmer-rem-fembot.png?v=1750190225&width=480"
@@ -42,31 +38,70 @@ function inject(makeup) {
         <div class="h3">
           <h3>$9.99</h3>
         </div>
-        </div>
+        </div>`);
+          
     //query the container
     //using adjacent html push card into container
-}
-inject(makeup[0]);
-{
-  makeup.forEach (makeup => {
-    if ()
-  }
+    // Select the container using querySelector
+const productContainer = document.querySelector('.product-container');
+// Loop through products and display them
+Makeup.forEach(item => {
+  const cardHTML = `
+    <div class="container">
+      <div class="card">
+            <img src="${product.image}">
+        <h3>${product.name}</h3>
+        <p>$${product.price.toFixed(2)}</p>
+        <button class="btn">Add To Cart</button>
+      </div>
+    </div>
+  `;
 
-,  function filterByCategory() {
-  const cards= document.querySelectorAll("card");
-  cards.forEach((card)) => {
-    const CardCategory = card.getAttribute("data-category");
-    if (category === cardCategory) {
-      card.style.display = "";
-          }
-
-  }
-
-
-}
-
+  // Insert each card into the container
+  productContainer.insertAdjacentHTML("beforeend", cardHTML);
+});
 
 }
+const productContainer = document.querySelector('.container');
+const filterButtons = document.querySelectorAll('.filter-buttons button');
+
+// Function to display products
+function displayProducts(items) {
+  productContainer.innerHTML = ""; // Clear existing cards
+
+  items.forEach(item => {
+    const cardHTML = `
+      <div class="card">
+        <img src="${item.image}">
+          <h3>${item.name}</h3>
+          <p>$${item.price.toFixed(2)}</p>
+          <button class="btn">Add To Cart</button>
+        </div>
+      </div>
+    `;
+    productContainer.insertAdjacentHTML("beforeend", cardHTML);
+  });
+}
+
+// Show all by default
+displayProducts(makeup);
+
+// Add click event for filters
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const category = button.getAttribute('data-category');
+    if (category === "all") {
+      displayProducts(makeup);
+    } else {
+      const filtered = makeup.filter(item => item.category === category);
+      displayProducts(filtered);
+    }
+  });
+});
+
+
+
+
 /* function addToCart() {
 const butons = document.querySelectorAll("button");
 console.log(buttons)
