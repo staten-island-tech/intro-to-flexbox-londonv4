@@ -1,96 +1,69 @@
 const makeup = [
-{
+  {
     name: "Plumping Lip Gloss (pink)",
-    category: "Gloss",
-    instock: true, 
-    price: 14.99,
-    img: "img/pinklipgloss",
-}
-,{
+    category: "Lipss",
+    instock: true,
+    price: 9.99,
+    img: "https://rembeauty.com/cdn/shop/files/01_plumping-lip-gloss-on-your-collar-shimmer-rem-fembot.png?v=1750190225&width=480"
+  },
+  {
     name: "Plumping Lip Gloss (purple)",
-    category: "Gloss",
-    instock: true, 
-    price: 14.99,
-    img: "img/pinklipgloss",
-}
-,{
+    category: "Lips",
+    instock: true,
+    price: 9.99,
+    img: "https://media.ulta.com/i/ulta/2643725?w=200&h=200&fmt=auto"
+  },
+  {
     name: "Plumping Lip Gloss (white)",
-    category: "Gloss",
-    instock: true, 
+    category: "Lips",
+    instock: true,
+    price: 9.99,
+    img: "https://rembeauty.com/cdn/shop/files/01_plumping-lip-gloss-on-your-collar-shimmer-rem-fembot.png?v=1750190225&width=480"
+  },
+  {
+    name: "Satin Matte Blush",
+    category: "Blush",
+    instock: true,
     price: 14.99,
-    img: "img/pinklipgloss",
-}
-]
+    img: ""
+  },
+  {
+    name: "Satin Matte Blush",
+    category: "Blush",
+    instock: true,
+    price: 14.99,
+    img: ""
+  }
+];
 
-// create inject function
-function inject(makeup) {
-    //do something
-      const container = document.querySelector(".container")
-      container.insertAdjacentHTML("afterbegin", `<div class="card">
-        <div class="img">
-          <img
-            src="https://rembeauty.com/cdn/shop/files/01_plumping-lip-gloss-on-your-collar-shimmer-rem-fembot.png?v=1750190225&width=480"
-          />
-        </div>
-        <div class="h2">
-          <h2>Plumping Lip Gloss (pink)</h2>
-        </div>
-        <div class="h3">
-          <h3>$9.99</h3>
-        </div>
-        </div>`);
-          
-    //query the container
-    //using adjacent html push card into container
-    // Select the container using querySelector
-const productContainer = document.querySelector('.product-container');
-// Loop through products and display them
-Makeup.forEach(item => {
-  const cardHTML = `
-    <div class="container">
-      <div class="card">
-            <img src="${product.image}">
-        <h3>${product.name}</h3>
-        <p>$${product.price.toFixed(2)}</p>
-        <button class="btn">Add To Cart</button>
-      </div>
-    </div>
-  `;
-
-  // Insert each card into the container
-  productContainer.insertAdjacentHTML("beforeend", cardHTML);
-});
-
-}
 const productContainer = document.querySelector('.container');
-const filterButtons = document.querySelectorAll('.filter-buttons button');
+const filterButtons = document.querySelectorAll('.filter-container button');
 
 // Function to display products
 function displayProducts(items) {
-  productContainer.innerHTML = ""; // Clear existing cards
-
+  productContainer.innerHTML = "";
   items.forEach(item => {
     const cardHTML = `
       <div class="card">
-        <img src="${item.image}">
-          <h3>${item.name}</h3>
-          <p>$${item.price.toFixed(2)}</p>
-          <button class="btn">Add To Cart</button>
+        <div class="img">
+          <img src="${item.img}" alt="${item.name}">
         </div>
+        <div class="h2"><h2>${item.name}</h2></div>
+        <div class="h3"><h3>$${item.price.toFixed(2)}</h3></div>
+        <div class="btn"><button>Add To Cart</button></div>
       </div>
     `;
     productContainer.insertAdjacentHTML("beforeend", cardHTML);
   });
 }
 
-// Show all by default
+// Show all products by default
 displayProducts(makeup);
 
-// Add click event for filters
 filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const category = button.getAttribute('data-category');
-    if (category === "all") {
+  button.addEventListener("click", () => {
+    const category = button.getAttribute("data-category");
+    if (category === "All") {
       displayProducts(makeup);
     } else {
       const filtered = makeup.filter(item => item.category === category);
@@ -98,18 +71,3 @@ filterButtons.forEach(button => {
     }
   });
 });
-
-
-
-
-/* function addToCart() {
-const butons = document.querySelectorAll("button");
-console.log(buttons)
-btnArray.forEach((btn) => btn.addEventListener("click", function (event) {
-    console.log(event.target.textContent);
-     console.log(event.target.closest(".card").getAttribute("data-title")
-);
-})
-} */
-//find the item in the array
-//take that object and push into cart

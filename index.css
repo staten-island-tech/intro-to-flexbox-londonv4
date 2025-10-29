@@ -1,88 +1,110 @@
-html,
-body body {
-  font-family: "Quicksand", sans-serif;
-}
-.site-header {
-  text-align: center;
-  margin: 30px 0 10px;
-}
-
-.site-header h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: hotpink;
-  margin: 0;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
   font-family: "Quicksand", sans-serif;
   background-color: #f9f9f9;
   padding: 20px;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* evenly space 4 cards per row */
-  max-width: 1100px; /* enough width for 4 cards */
-  margin: 0 auto;
-  gap: 20px; /* gap between cards */
+.site-header {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+.site-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: hotpink;
+}
+
+/* Filter Buttons */
+.filter-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-container button {
+  background-color: hotpink;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-container button:hover {
+  background-color: #ff85c0;
 }
 
 .container {
-  flex: 0 1 23%; /* each card ~23% width, 4 fit per row */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.card {
+  flex: 0 1 23%;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-
-.card {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.img {
-  width: "300";
-  height: "300";
-  text-align: center;
-  margin: 30px 0 10px;
-}
-
-.card {
+  align-items: center;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.h2 {
-  font-size: 1.1rem;
-  color: lightblue;
   text-align: center;
-  margin: 30px 0 10px;
+  transition: transform 0.2s;
 }
 
-.h3 {
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Product Image */
+.card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Product Name */
+.h2 h2 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 15px 0 5px;
+}
+
+/* Price */
+.h3 h3 {
   font-size: 1rem;
   color: plum;
-  text-align: center;
-  margin: 30px 0 10px;
+  margin-bottom: 10px;
 }
 
-.btn {
-  width: 75px;
-  height: 50px;
-  font-size: 1.1rem;
-  text-align: center;
-  margin: 30px 0 10px;
+/* Add to Cart Button */
+.btn button {
+  background-color: lightblue;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn button:hover {
+  background-color: deepskyblue;
+  color: white;
 }
