@@ -11,7 +11,7 @@ const makeup = [
     category: "Lips",
     instock: true,
     price: 9.99,
-    img: "https://media.ulta.com/i/ulta/2643725?w=200&h=200&fmt=auto"
+    img: "https://media.ulta.com/i/ulta/2643725?w=200&h=200&fmt=auto",
   },
   {
     name: "Plumping Lip Gloss (white)",
@@ -25,14 +25,14 @@ const makeup = [
     category: "Blush",
     instock: true,
     price: 14.99,
-    img: ""
+    img: "",
   },
   {
     name: "Satin Matte Blush",
     category: "Blush",
     instock: true,
     price: 14.99,
-    img: ""
+    img: "",
   }
 ];
 
@@ -56,6 +56,7 @@ function displayProducts(items) {
     productContainer.insertAdjacentHTML("beforeend", cardHTML);
   });
 }
+
 
 // Show all products by default
 displayProducts(makeup);
