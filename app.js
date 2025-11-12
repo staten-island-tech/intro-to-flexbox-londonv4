@@ -145,7 +145,7 @@ const makeup = [
 const productContainer = document.querySelector('.container');
 const filterButtons = document.querySelectorAll('.filter-container button');
 
-// Function to display products
+
 function displayProducts(items) {
   productContainer.innerHTML = "";
   items.forEach(item => {
@@ -162,8 +162,13 @@ function displayProducts(items) {
     productContainer.insertAdjacentHTML("beforeend", cardHTML);
   });
 }
+makeup.forEach (items); {
+  let total = 0;
+  let totals = item.price * quantity;
+  console.log (total.price);
+}
 
-// Show all products by default
+
 displayProducts(makeup);
 
 filterButtons.forEach(button => {
