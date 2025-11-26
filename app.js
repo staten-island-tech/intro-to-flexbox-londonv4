@@ -162,12 +162,6 @@ function displayProducts(items) {
     productContainer.insertAdjacentHTML("beforeend", cardHTML);
   });
 }
-makeup.forEach (items); {
-  let total = 0;
-  let totals = item.price * quantity;
-  console.log (total.price);
-}
-
 
 displayProducts(makeup);
 
